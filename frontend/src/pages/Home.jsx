@@ -1,5 +1,6 @@
 import MovieCard from "../Components/MovieCard";
 import { useState } from "react";
+import "../css/Home.css";
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -10,7 +11,11 @@ function Home() {
     { id: 3, title: "The Matrix", release_date: "1998" },
   ];
 
-  const handleSearch = () => {};
+  const handleSearch = (e) => {
+    e.preventDefault();
+    alert(searchQuery);
+    setSearchQuery("");
+  };
 
   return (
     <div className="home">
